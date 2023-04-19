@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Login / Sign Up Form</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<button class="aboutbtn">About</button>
+<button class="menubtn">Menu</button>
+<body>
+    <h1 class="title__name" id="title__nameID">HoweTo?</h1>
+    <div class="container" id="cointainershrink">
+        <form class="form" id="login">
+            <h1 class="form__title">Login</h1>
+            <div class="form__message form__message--error"></div>
+            <div class="form__input-group">
+                <div class="inputIconBox"><i class="fa-sharp fa-solid fa-envelope icon"></i></div>   
+                <input type="text" class="form__input" autofocus placeholder="Username or Email" >
+                <div class="form__input-error-message"></div>
+            </div>
+            <div class="form__input-group">
+                <div class="inputIconBox"><span><i class="fa-solid fa-lock passicon"></i></span></div>
+                <input type="password" class="form__input" autofocus placeholder="Password">
+                <div class="form__input-error-message"></div>
+            </div>
+            <button class="form__button" type="submit">Continue</button>
+            <p class="form__text">
+                <a class="form__link" id="passResetLink">Forgot your password?</a>
+            </p>
+            <p class="form__text">
+                <a class="form__link" id="linkCreateAccount">Dont have an account? <u>Create an account</u></a>
+            </p>
+        </form> 
+        <div class="newcontainer" id="SignupContainer">
+        <form class="form form--hidden" id="createAccount">
+            <h1 class="form__title">Create an Account</h1>
+            <div class="form__message form__message--error"></div>
+            <div class="form__input-group">
+                <div class="inputIconBox"><span><i class="fa-solid fa-user icon"></i></span></div>
+                <input type="text" id="signupUsername" class="form__input" autofocus placeholder="Username">
+                <div class="form__input-error-message"></div>
+            </div>
+            <div class="form__input-group">
+                <div class="inputIconBox"><span><i class="fa-sharp fa-solid fa-envelope icon"></i></span></div>
+                <input type="text" class="form__input" autofocus placeholder="Email Address">
+                <div class="form__input-error-message"></div>
+            </div>
+            <div class="form__input-group">
+                <div class="inputIconBox"><span><i class="fa-solid fa-lock-open lockicon"></i></span></div>
+                <input type="password" id="signupPassword" class="form__input" autofocus placeholder="Password">
+                <div class="form__input-error-message"></div>
+            </div>
+            <div class="form__input-group">
+                <div class="inputIconBox"><i class="fa-solid fa-lock icon"></i></div>
+                <input type="password" class="form__input" autofocus placeholder="Confirm Password">
+                <div class="form__input-error-message"></div>
+            </div>
+            <button class="form__button" type="submit">Continue</button>
+            <p class="form__text">
+                <a class="form__link" id="linkLogin" >Already have an account? <u>Sign in</u></a>
+            </p>
+        </form> 
+     </div>
+
+        <form class="form form--hidden" id="resetPassword">
+            <i class="fa-solid fa-arrow-left fa-lg back__button" id="backToLoginLink"></i>
+            <h1 class="form__title">Reset Your Password</h1>
+            <div class="form__message form__message--error"></div>
+            <div class="form__input-group">
+                <input type="text" class="form__input" autofocus placeholder="Email Address">
+                <div class="form__input-error-message"></div>
+                <button class="form__buttonreset" id="sendEmail" type="submit">Send</button>
+            </div>
+        </form> 
+
+    </div>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="main.js"></script>
+</body>

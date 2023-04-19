@@ -1,0 +1,448 @@
+body {
+    --color-primary: #eeeeee;
+    --color-primary-dark: #5d695b;
+    --color-darkended-secondary: #252c6a;
+    --color-error: #900d09;
+    --color-success: #4bb544;
+    --border-radius: 25px;
+
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    background: url(pexels-eberhard-grossgasteiger-1367192.jpg);
+    background-size: cover;
+}
+
+.form {
+    transition: all 1s ease-in-out;
+}
+
+.container {
+    position: absolute;
+    width: 400px;
+    max-width: 400px;
+    margin: 1rem;
+    padding: 2rem;
+    box-shadow: 0 0 60px rgba(1,1,1,0.2);
+    border-radius: var(--border-radius);
+    background: var(--color-primary);
+    transition: all 1s ease-in-out;
+}
+
+.container,
+.form__input,
+.form__button {
+    font: 500 1rem 'Quicksand', sans-serif;
+}
+
+@-webkit-keyframes fadeout{
+    from{
+       height: 410px;
+    }
+    to{
+        height: 335px;
+    }
+}
+
+@-webkit-keyframes fadein{
+    from{
+       height: 335px;
+    }
+    to{
+        height: 410px;
+    }
+}
+
+@-webkit-keyframes fadeinpass{
+    from{
+       height: 335px;
+    }
+    to{
+        height: 250px;
+    }
+}
+
+@-webkit-keyframes fadeoutpass{
+    from{
+       height: 250px;
+    }
+    to{
+        height: 335px;
+    }
+}
+
+.form--animateresetpassout {
+    -webkit-animation: fadeoutpass 0.45s;
+}
+
+.form--animateresetpass {
+    -webkit-animation: fadeinpass 0.45s;
+}
+
+.form--animate {
+    -webkit-animation: fadein 0.45s;
+}
+
+.form--animateout {
+    -webkit-animation: fadeout 0.45s;
+}
+
+.form--hidden {
+    display: none;
+}
+
+.form > *:first-child {
+    margin-top: 0;
+}
+
+.form > *:last-child {
+    margin-top: 0;
+}
+
+.form__title {
+    text-align: center;
+}
+
+.form__message {
+    text-align: center;
+}
+
+.form__message--success {
+    color: var(--color-success);
+}
+
+.form__message--error {
+    color: var(--color-error);
+    margin-bottom: 1rem;
+}
+
+.form__input-group {
+    margin-bottom: 1rem;
+}
+
+.form__input {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    box-sizing: border-box;
+    border-radius: var(--border-radius);
+    border: 2px solid #000000;
+    outline: none;
+    background: #eeeeee;
+    transition: 0.2s;
+    margin-top: 6px;
+}
+
+.form__input:focus {
+    border-color: var(--color-primary-dark);
+    background: var(--color-primary);
+    transform: scale(1.03);
+}
+
+.form__input--error {
+    color: var(--color-error);
+    border-color: var(--color-error);
+}
+
+.form__input-error-message {
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--color-error);
+}
+
+.form__button {
+    width: 100%;
+    padding: 1rem 2rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: black;
+    border: 2px solid black;
+    border-radius: var(--border-radius);
+    outline: none;
+    cursor: pointer;
+    background: var(--color-primary);
+}
+
+.form__button:hover {
+    background: var(--color-primary-dark);
+    color: White;
+}
+
+.form__button:active {
+    transform: scale(0.98);
+    background-color: #515b4f;
+}
+
+.form__buttonreset {
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+    width: 75%;
+    padding: 1rem 2rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: black;
+    border: 2px solid black;
+    border-radius: var(--border-radius);
+    outline: none;
+    cursor: pointer;
+    background: var(--color-primary);
+    margin-left: 50px;
+}
+
+.form__buttonreset:hover {
+    background: var(--color-primary-dark);
+    color: White;
+}
+
+.form__buttonreset:active {
+    transform: scale(0.98);
+    background-color: #515b4f;
+}
+
+
+
+.form__text {
+    text-align: center;
+}
+
+.form__link {
+    color: black;
+    text-decoration: none;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+.form__link:hover {
+    text-decoration: underline;
+}
+
+.passicon {
+    position: absolute;
+    z-index: 100000;
+}
+
+
+.icon {
+    position: absolute;
+    z-index: 100000;
+}
+
+.lockicon {
+    position: absolute;
+    z-index: 100000;
+}
+
+.inputIconBox {
+    position: relative;
+}
+
+.inputIconBox .icon{
+    right: 15px;
+    top: 14px;
+}
+
+.inputIconBox .lockicon{
+    right: 13.5px;
+    top: 14px;
+}
+
+.inputIconBox .passicon {
+    right: 15px;
+    top: 14px;
+}
+
+
+.back__button {
+    cursor: pointer;
+}
+
+.title__name {
+    font: 500 4rem 'Quicksand', sans-serif;
+    font-weight: bolder;
+    position: relative;
+    transition: 0.35s;
+    color: white;
+    bottom: 255px;
+}
+
+
+
+.title__name:hover,
+.title__name--moveup:hover
+ {
+    transform: scale(1.09);
+    letter-spacing: 2px;
+}
+
+.aboutbtn  {
+    position: fixed;
+    font: 500 3rem 'Quicksand', sans-serif;
+    outline: none;
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: white;
+    right: 230px;
+    top: 27px;
+}
+
+.aboutbtn::after {
+    content: '';
+    height: 3px;
+    width: 0%;
+    background-color:white;
+    display: block;
+    transition: .3s ease-in-out;
+}
+
+.aboutbtn:hover::after {
+    content: '';
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    display: block;
+}
+
+
+.menubtn  {
+    position: fixed;
+    font: 500 3rem 'Quicksand', sans-serif;
+    outline: none;
+    border: none;
+    background: none;
+    right:50px;
+    top: 27px;
+    cursor: pointer;
+    color: white;
+}
+
+.menubtn::after {
+    content: '';
+    height: 3px;
+    width: 0%;
+    background-color: white;
+    display: block;
+    transition: .3s ease-in-out;
+}
+
+.menubtn:hover::after {
+    content: '';
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    display: block;
+}
+
+@media all and (min-width: 701px) {
+    .title__name {
+        align-self: center;
+        width: 320px;
+        height: 90px;
+        padding: 20px 20px;
+        font: 500 4rem 'Quicksand', sans-serif;
+        position: fixed;
+        display: inline;
+        font-weight: bolder;
+        transition: 0.3s;
+        color: white;
+        left: 40px;
+        top: -50px;
+    }
+
+    .title__name--movedown {
+        align-self: center;
+        width: 320px;
+        height: 90px;
+        padding: 20px 20px;
+        font: 500 4rem 'Quicksand', sans-serif;
+        position: fixed;
+        display: inline;
+        font-weight: bolder;
+        transition: 0.3s;
+        color: white;
+        left: 40px;
+        top: -50px;
+    }
+
+    .title__name--moveup {
+        align-self: center;
+        width: 320px;
+        height: 90px;
+        padding: 20px 20px;
+        font: 500 4rem 'Quicksand', sans-serif;
+        position: fixed;
+        display: inline;
+        font-weight: bolder;
+        transition: 0.3s;
+        color: white;
+        left: 40px;
+        top: -50px;
+    }
+}
+
+@media all and (max-width: 970px) {
+    .menubtn {
+        display: none;
+    }
+    .aboutbtn {
+        display: none;
+    }
+}
+
+@media (max-width: 500px) {
+    .container {
+        max-width: 300px;
+    }
+
+    @-webkit-keyframes fadeout{
+        from{
+           height: 410px;
+        }
+        to{
+            height: 355px;
+        }
+    }
+
+    @-webkit-keyframes fadeinpass{
+        from {
+           height: 335px;
+        }
+        to {
+            height: 291px;
+        }
+    }
+
+    @-webkit-keyframes fadeoutpass{
+        from {
+           height: 291px;
+        }
+        to {
+            height: 355px;
+        }
+    }
+
+}
+
+@media (max-width: 700px) {
+    .title__name--moveup {
+        font: 500 4rem 'Quicksand', sans-serif;
+        font-weight: bolder;
+        position: relative;
+        transition: 0.35s;
+        color: white;
+        bottom: 290px;
+    }
+    
+    .title__name--movedown {
+        font: 500 4rem 'Quicksand', sans-serif;
+        font-weight: bolder;
+        position: relative;
+        transition: 0.35s;
+        color: white;
+        bottom: 220px;
+    }
+}
